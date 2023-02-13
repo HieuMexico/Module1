@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="DKX" src="car.jpg" alt="">
+    <br>
+    <button id="DKXP" onclick="Right()">Phải</button>
+    <button id="DKXD" onclick="Down()">Xuống</button>
+    <button id="DKXT" onclick="Left()">Trái</button>
+    <button id="DKXL" onclick="Goup()">Lên</button>
+
+    <script>
+        function Right(){
+            document.getElementById('DKX').src ="carP.jpg"
+        }
+        function Down(){
+            document.getElementById('DKX').src ="carX.jpg"
+        }
+        function Left(){
+            document.getElementById('DKX').src ="carT.jpg"
+        }
+        function Goup(){
+            document.getElementById('DKX').src ="car.jpg"
+        }
+    </script>
+</body>
+</html>

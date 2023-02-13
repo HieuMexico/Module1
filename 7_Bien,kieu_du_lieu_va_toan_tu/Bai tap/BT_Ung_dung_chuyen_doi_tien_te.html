@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="number"></td>
+                <td> <select id="from" style="width: 55px;">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="to" style="width: 55px;">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <button style="background-color: rgb(169, 118, 195);" onclick="change()">Corvert</button>
+                    <div id="Result"></div>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function change() {
+                var num = document.getElementById('number').value;
+                var from = document.getElementById('from').value;
+                var to = document.getElementById('to').value;
+                if (from == "VND" && to == "USD") {
+                    document.getElementById('Result').innerHTML = 1/23000 + "$";
+                }
+                else if ( to == "USD" && from == "VND")
+                document.getElementById('Result').inertHTML = 1*23000 + "Đ";
+            }
+            else if ( from == "VND") {
+                document.getElementById('Result').innerHTML = 1 + "Đ";
+            }
+            else {
+                document.getElementById('Result').innerHTML = 1 + "$";
+            } 
+        </script>
+    </form>
+</body>
+
+</html>
