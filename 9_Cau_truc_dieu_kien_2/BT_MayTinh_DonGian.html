@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table style="background-color: rgb(97, 97, 124);">
+        <tr>
+            <td><input type="text" name="" id="kq" style="width: 100px;"></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" value="1" onclick="snum(this.value)">1</button>
+                <button type="button" value="2" onclick="snum(this.value)">2</button>
+                <button type="button" value="3" onclick="snum(this.value)">3</button>
+                <button type="button" value="+" onclick="snum(this.value)">+</button>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <button type="button" value="4" onclick="snum(this.value)">4</button>
+                <button type="button" value="5" onclick="snum(this.value)">5</button>
+                <button type="button" value="6" onclick="snum(this.value)">6</button>
+                <button type="button" value="-" onclick="snum(this.value)">-</button>
+        </tr>
+        </td>
+
+        <tr>
+            <td>
+                <button type="button" value="7" onclick="snum(this.value)">7</button>
+                <button type="button" value="8" onclick="snum(this.value)">8</button>
+                <button type="button" value="9" onclick="snum(this.value)">9</button>
+                <button type="button" value="*" onclick="snum(this.value)">*</button>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="xoa()">AC</button>
+                <button type="button" value="0" onclick="snum(this.value)">0</button>
+                <button name="bang" onclick="bang()">=</button>
+                <button type="button" value="/" onclick="snum(this.value)">/</button>
+            </td>
+
+        </tr>
+    </table>
+    <script>
+        let kq = document.getElementById("kq");
+
+        function snum(value) {
+            kq.value += value;
+        }
+        function bang() {
+            let result = eval(kq.value);
+            kq.value = result;
+        }
+        function xoa() {
+            kq.value = "";
+        }
+    </script>
+</body>
+
+</html>
