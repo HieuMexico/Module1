@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Kiểm Tra số ngày trong Tháng</h1>
+    <input  min="1" max="12" name="" id="number" placeholder="Nhập tháng" style="width: 10%;">
+    <button onclick="check_thang()">Check</button>
+    <p id="result">Đây là chỗ hiển thị kết quả</p>
+    <script>
+        let thang_1 = "1";
+        let thang_2 = "2";
+        let thang_3 = "3";
+        let thang_4 = "4";
+        let thang_5 = "5";
+        let thang_6 = "6";
+        let thang_7 = "7";  
+        let thang_8 = "8";
+        let thang_9 = "9";
+        let thang_10 = "10";
+        let thang_11 = "11";
+        let thang_12 = "12";
+
+        function check_thang() {
+            let number = +document.getElementById("number").value;
+            switch (number) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("result").innerHTML = "Tháng" + number + "Có 31 ngày";
+                    break;
+                case 2:
+                    document.getElementById("result").innerHTML = "Tháng" + number + "Có 28 hoặc 29 ngày";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("result").innerHTML = "Tháng" + number + "Có 30 ngày";
+                    break;
+                default:
+                    document.getElementById("result").innerHTML = "1 năm chỉ có 12 tháng vui lòng nhập đúng số tháng"
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

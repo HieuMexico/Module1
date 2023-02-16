@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let TN = +prompt("nhập lương");
+    switch(true){
+        case (TN > 80):  
+        alert("Bậc 7");
+        break;
+        case (TN <= 80 && TN >= 52): 
+        alert("Bậc 6");
+        break;
+        case (TN <= 52 && TN >= 32): 
+        alert("Bậc 5");
+        break;
+        case (TN <= 32 && TN >= 18): 
+        alert("Bậc 4");
+        break;
+        case (TN <= 18 && TN >= 10):
+        alert("Bậc 3");
+        break;
+        case (TN <= 10 && TN > 5): 
+        alert("Bậc 2");
+        break;
+        default:
+        alert("Bậc 1");    
+    } 
+    </script>
+</body>
+</html>
