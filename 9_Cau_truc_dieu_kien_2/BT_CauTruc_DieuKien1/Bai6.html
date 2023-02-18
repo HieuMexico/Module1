@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Số lượng</label>
+    <br>
+    <input type="number" name="" id="sl">
+    <br>
+    <label for="">Giá tiền</label>
+    <br>
+    <input type="number" name="" id="gt">
+    <br>
+    <button type="button" onclick="result()">Result</button>
+
+    <script>
+        function result() {
+            let sl = Number(document.getElementById('sl').value);
+            let gt = Number(document.getElementById('gt').value);
+            let doanhthu = sl * gt;
+            let hoahong;
+            if (doanhthu >= 1000000) {
+                hoahong = doanhthu*10/100;
+                alert('Tiền hoa hồng của bạn là ' + hoahong)
+            } else if (doanhthu >= 500000) {
+                hoahong = doanhthu*7/100;
+                alert('Tiền hoa hồng của bạn là ' + hoahong)
+            } else if (doanhthu < 500000 && doanhthu >= 250000) {
+                hoahong = doanhthu*5/100;
+                alert('Tiền hoa hồng của bạn là ' + hoahong)
+            } else {
+                alert('Bạn không có hoa hồng')
+            }
+        }
+    </script>
+</body>
+</html>

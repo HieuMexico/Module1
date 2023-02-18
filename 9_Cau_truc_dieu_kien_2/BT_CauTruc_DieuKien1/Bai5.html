@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <label for="">Nhập điểm kiểm tra</label> <br>
+    <input type="number" name="" id="KT"><br>
+    <label for="">Nhập điểm giữa kì</label> <br>
+    <input type="number" name="" id="GK"><br>
+    <label for="">Nhập điểm kiểm tra cuối kì</label> <br>
+    <input type="number" name="" id="CK"><br>
+    <button type="submit" onclick="KTHL()">result</button>
+    <script>
+
+
+        function KTHL() {
+            let KT = Number(document.getElementById('KT').value);
+            let GK = Number(document.getElementById('GK').value);
+            let CK = Number(document.getElementById('CK').value);
+            let DTB = (KT + GK + CK) / 3;
+
+            if (DTB >= 9 &&  DTB < 10) {
+                alert('Học sinh giỏi');
+                
+            } else if (DTB >= 7 && DTB < 9) {
+                alert('Học sinh khá');
+            } else if (DTB < 7 && DTB >= 5 ) {
+                alert('Học sinh trung bình');
+            } else if (DTB < 5 && DTB >= 3) {
+                alert('Học sinh yếu');
+            } else {
+                alert('Học sinh kém')
+            }
+        }
+    </script>
 </body>
+
 </html>
