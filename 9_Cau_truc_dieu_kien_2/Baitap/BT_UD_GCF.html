@@ -9,24 +9,21 @@
 </head>
 
 <body>
-    <div class="container">
-        <div>
-            <input type="checkbox" class="checkg" id="good">
-            <label for="good">GOOD</label>
-        </div>
-        <div>
-            <input type="checkbox" class="checkc" id="cheap">
-            <label for="cheap">CHEAP</label>
-        </div>
-        <div>
-            <input type="checkbox" class="checkf" id="fast">
-            <label for="fast">FAST</label>
-        </div>
-    </div>
-
-    <script>
-
-    </script>
+    <input type="checkbox" id="good" onchange="changeGood()">Good <br>
+    <input type="checkbox" id="fast" onchange="changeFast()">Fast <br>
+    <input type="checkbox" id="cheap" onchange="changeCheap()">Cheap
+</body>
+<script>
+    function changeGood() {
+        document.getElementById('fast').checked = !document.getElementById('good').checked;
+    }
+    function changeFast() {
+        document.getElementById('cheap').checked = !document.getElementById('fast').checked;
+    }
+    function changeCheap() {
+        document.getElementById('good').checked = !document.getElementById('cheap').checked;
+    }
+</script>
 </body>
 
 </html>
