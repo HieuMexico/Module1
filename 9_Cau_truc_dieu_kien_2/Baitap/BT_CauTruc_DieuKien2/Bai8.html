@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Nhập số tuổi</label>
+    <input type="number" name="" id="tuoi">
+    <button onclick="kt()">Result</button>
+
+    <script>
+        function kt() {
+            let tuoi = Number(document.getElementById('tuoi').value);
+            if (tuoi >= 0 && tuoi <= 120) {
+                alert('Tuổi của 1 người là : ' + tuoi + "Tuổi");
+            } else {
+                alert('Vui lòng nhập đúng số tuổi');
+            }
+        }
+    </script>
+</body>
+</html>

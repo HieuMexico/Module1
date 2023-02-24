@@ -10,17 +10,29 @@
     <table>
         <tr>
             <td>
-                <label for="ft">Nhập số mét cần chuyển đổi</label>
-                <input type="number" name="" id="ft">
+                <label for="m">Nhập số mét cần chuyển đổi</label>
+                <input type="number" name="" id="m">
             </td>
         </tr>
         <tr>
             <td>
-                <label for="m">Kết quả</label>
+                <label for="f">Kết quả</label>
                 <input type="text" name="" id="kq">
                 <button onclick="check()">Chuyển đổi</button>
             </td>
         </tr>
     </table>
+    <script>
+         function check(){
+                let m = Number(document.getElementById('m').value);
+                if ( m >= 0){               
+                 let f = m * 3.2808;
+                let kq = document.getElementById('kq');
+                kq.value = `${m} mét sẽ là ${f} feet`;
+                }else{
+                    kq.value = 'Vui lòng nhập số dương!'
+                }
+            }
+    </script>
 </body>
 </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Nhập a</label><br>
+    <input type="number" name="" id="a"><br>
+    <label for="">Nhập b</label><br>
+    <input type="number" name="" id="b"><br>
+    <button onclick="dt()">Result</button>
+    <script>
+        function dt() {
+            let a = Number(document.getElementById('a').value);
+            let b = Number(document.getElementById('b').value);
+            let S = 1/2 *(a*b);
+            alert("Diện tích hình tam giác là: " + S);
+        }
+    </script>
+</body>
+</html>

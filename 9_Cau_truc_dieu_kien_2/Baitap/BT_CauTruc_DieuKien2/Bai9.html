@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Nhập a</label>
+    <input type="number" name="" id="a">
+    <label for="">Nhập b</label>
+    <input type="number" name="" id="b">
+    <label for="">Nhập c</label>
+    <input type="number" name="" id="c">
+    <button onclick="kt()">Result</button>
+
+    <script>
+        function kt() {
+            let a = Number(document.getElementById('a').value);
+            let b = Number(document.getElementById('b').value);
+            let c = Number(document.getElementById('c').value);
+
+            if (a, b, c > 0) {
+                if (a + b > c) {
+                    if (b + c > a) {
+                        if (a + c > b) {
+                            alert('Đó là một tam giác');
+                        } else {
+                            alert('Đó không phải là một tam giác');
+                        }
+                    } else {
+                        alert('Đó không phải là một tam giác');
+                    }
+                } else {
+                    alert('Đó không phải là một tam giác');
+                }
+            } else {
+                alert('Đó không phải là một tam giác');
+            }
+        }
+    </script>
+</body>
+
+</html>

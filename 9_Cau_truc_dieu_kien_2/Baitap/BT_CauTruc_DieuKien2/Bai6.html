@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Nhập a</label>
+    <input type="number" name="" id="a">
+    <label for="">Nhập b</label>
+    <input type="number" name="" id="b">
+    <button onclick="kt()">Result</button>
+    <script>
+        function kt() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let kq;
+
+            if (a==0 && b==0) {
+                alert('Phương trình vô số nghiệm');
+            } else if (a==0 && b>0) {
+                alert('Phương trình vô nghiệm');
+            } else if (a != 0 && b != 0) {
+                kq = (-b)/a;
+                alert('Phương trình có một nghiệm' + kq );
+            }
+        }
+    </script>
+</body>
+</html>
