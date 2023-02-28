@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = parseInt(prompt('Nhập số nguyên tố cần kiểm tra'));
+        KtraSNT(number)
+        function KtraSNT(number) {
+            let count = 0;
+            let KtraSNT = false;
+
+            if (number == 0) {
+                alert(number + " Không phải là số nguyên tố")
+            } else {
+                for (let i = 1; i <= number; i++) {
+                    if (number % i == 0) {
+                        count += 1;
+                    }
+                }
+                if (count == 2) {
+                    KtraSNT = true
+                }
+                if (KtraSNT) {
+                    alert(number + " là số nguyên số")
+                } else {
+                    alert(number + " không là số nguyên tố")
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

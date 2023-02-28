@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="idCanvas" width="120" height="80"></canvas>
+    <script>
+        function Rectangle(width, height) {
+            this.width = width;
+            this.height = height;
+
+            this.getWidth = function() {
+                return this.width;
+            }
+            this.getHeight = function() {
+                return this.height;
+            }
+            this.setWidth = function(width) {
+                this.width = width;
+            }
+            this.setHeight = function(height) {
+                this.height = height;
+            }
+            this.toString = function() {
+                return `Thông tin của hình chữ nhật là w: ${this.width} , h: ${this.height}`;
+            }
+        }
+        let r1 = new Rectangle(120,80);
+        // document.write(r1.toString());
+
+        let canvas = document.getElementById("idCanvas");
+
+        let ctx = canvas.getContext('2d');
+
+        ctx.fillStyle='#60e060';
+        ctx.fillRect(10, 10, r1.getWidth(), r1.getHeight());
+
+    </script>
+</body>
+</html>
